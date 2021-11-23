@@ -7,6 +7,13 @@ resource "aws_security_group" "mysg"{
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
     }
+ingress {
+    description = "SSH ACCESS"
+    from_port = 22
+    to_port = 22
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+    }
         egress {
         description = "All Traffic"
         from_port = 0
