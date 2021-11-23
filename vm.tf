@@ -14,7 +14,7 @@ resource "aws_instance" "server1"{
     }
     provisioner "remote-exec"{
     	inline = [
-		"sudo apt-get update && sudo apt-get install apache2 -y && echo DevOpsWorkshop > /var/www/html/index.html"
+		"sudo apt-get update && sudo apt-get install nginx -y && sudo echo DevOpsWorkshop > /var/www/html/index.html"
 	]
     }
 }
